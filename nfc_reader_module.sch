@@ -1,0 +1,499 @@
+EESchema Schematic File Version 4
+LIBS:nfc_reader_module-cache
+EELAYER 29 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:Conn_01x04_Male J3
+U 1 1 5D274E43
+P 2075 2000
+F 0 "J3" H 2048 1882 50  0000 R CNN
+F 1 "CONTROLLER" H 2048 1973 50  0000 R CNN
+F 2 "Connector_Phoenix_MC:PhoenixContact_MCV_1,5_4-G-3.81_1x04_P3.81mm_Vertical" H 2075 2000 50  0001 C CNN
+F 3 "~" H 2075 2000 50  0001 C CNN
+	1    2075 2000
+	1    0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0101
+U 1 1 5D2756FE
+P 2600 1600
+F 0 "#PWR0101" H 2600 1450 50  0001 C CNN
+F 1 "+5V" H 2615 1773 50  0000 C CNN
+F 2 "" H 2600 1600 50  0001 C CNN
+F 3 "" H 2600 1600 50  0001 C CNN
+	1    2600 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5D275BF1
+P 2375 2600
+F 0 "#PWR0102" H 2375 2350 50  0001 C CNN
+F 1 "GND" H 2380 2427 50  0000 C CNN
+F 2 "" H 2375 2600 50  0001 C CNN
+F 3 "" H 2375 2600 50  0001 C CNN
+	1    2375 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2275 2100 2375 2100
+Wire Wire Line
+	2375 2100 2375 2450
+Wire Wire Line
+	2275 2000 2600 2000
+$Comp
+L power:+5V #PWR0103
+U 1 1 5D27CA44
+P 2250 3500
+F 0 "#PWR0103" H 2250 3350 50  0001 C CNN
+F 1 "+5V" H 2265 3673 50  0000 C CNN
+F 2 "" H 2250 3500 50  0001 C CNN
+F 3 "" H 2250 3500 50  0001 C CNN
+	1    2250 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5D27CA4E
+P 2250 4950
+F 0 "#PWR0104" H 2250 4700 50  0001 C CNN
+F 1 "GND" H 2255 4777 50  0000 C CNN
+F 2 "" H 2250 4950 50  0001 C CNN
+F 3 "" H 2250 4950 50  0001 C CNN
+	1    2250 4950
+	1    0    0    -1  
+$EndComp
+Text Label 3050 4050 0    50   ~ 0
+SDA
+Text Label 3050 4150 0    50   ~ 0
+SCL
+Wire Wire Line
+	2850 4150 3050 4150
+Wire Wire Line
+	2850 4050 3050 4050
+$Comp
+L LED:WS2812B D1
+U 1 1 5D287B32
+P 9025 2200
+F 0 "D1" H 9150 1950 50  0000 L CNN
+F 1 "WS2812B" H 9150 1875 50  0000 L CNN
+F 2 "LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm" H 9075 1900 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf" H 9125 1825 50  0001 L TNN
+	1    9025 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Speaker LS1
+U 1 1 5D28BBAB
+P 9375 4950
+F 0 "LS1" H 9545 4946 50  0000 L CNN
+F 1 "Speaker" H 9545 4855 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_Murata_PKMCS0909E4000-R1" H 9375 4750 50  0001 C CNN
+F 3 "~" H 9365 4900 50  0001 C CNN
+	1    9375 4950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5D28C5BC
+P 8650 4950
+F 0 "R1" V 8550 4950 50  0000 C CNN
+F 1 "1K" V 8650 4950 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8580 4950 50  0001 C CNN
+F 3 "~" H 8650 4950 50  0001 C CNN
+	1    8650 4950
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5D28CB43
+P 8225 2200
+F 0 "C3" H 8111 2154 50  0000 R CNN
+F 1 "0.1uF" H 8111 2245 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 8263 2050 50  0001 C CNN
+F 3 "~" H 8225 2200 50  0001 C CNN
+	1    8225 2200
+	1    0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J5
+U 1 1 5D28D74E
+P 10100 2200
+F 0 "J5" H 10072 2132 50  0000 R CNN
+F 1 "WS2812_OUT" H 10072 2223 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 10100 2200 50  0001 C CNN
+F 3 "~" H 10100 2200 50  0001 C CNN
+	1    10100 2200
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 5D28DF29
+P 5850 3200
+F 0 "#PWR0105" H 5850 3050 50  0001 C CNN
+F 1 "+5V" H 5865 3373 50  0000 C CNN
+F 2 "" H 5850 3200 50  0001 C CNN
+F 3 "" H 5850 3200 50  0001 C CNN
+	1    5850 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5D28E499
+P 5850 4750
+F 0 "#PWR0106" H 5850 4500 50  0001 C CNN
+F 1 "GND" H 5855 4577 50  0000 C CNN
+F 2 "" H 5850 4750 50  0001 C CNN
+F 3 "" H 5850 4750 50  0001 C CNN
+	1    5850 4750
+	1    0    0    -1  
+$EndComp
+Text Label 6600 3700 0    50   ~ 0
+SDA
+Text Label 6600 3900 0    50   ~ 0
+SCL
+Text Label 6600 4000 0    50   ~ 0
+SPEAKER
+Text Label 6600 4100 0    50   ~ 0
+LED
+$Comp
+L power:GND #PWR0107
+U 1 1 5D28EC61
+P 8975 5700
+F 0 "#PWR0107" H 8975 5450 50  0001 C CNN
+F 1 "GND" H 8980 5527 50  0000 C CNN
+F 2 "" H 8975 5700 50  0001 C CNN
+F 3 "" H 8975 5700 50  0001 C CNN
+	1    8975 5700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0108
+U 1 1 5D28F184
+P 9025 2650
+F 0 "#PWR0108" H 9025 2400 50  0001 C CNN
+F 1 "GND" H 9030 2477 50  0000 C CNN
+F 2 "" H 9025 2650 50  0001 C CNN
+F 3 "" H 9025 2650 50  0001 C CNN
+	1    9025 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0109
+U 1 1 5D28F4CB
+P 9025 1750
+F 0 "#PWR0109" H 9025 1600 50  0001 C CNN
+F 1 "+5V" H 9040 1923 50  0000 C CNN
+F 2 "" H 9025 1750 50  0001 C CNN
+F 3 "" H 9025 1750 50  0001 C CNN
+	1    9025 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5D28FB36
+P 2600 2200
+F 0 "C1" H 2715 2246 50  0000 L CNN
+F 1 "10uF" H 2715 2155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 2638 2050 50  0001 C CNN
+F 3 "~" H 2600 2200 50  0001 C CNN
+	1    2600 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8225 2050 8225 1825
+Wire Wire Line
+	8225 1825 9025 1825
+Wire Wire Line
+	9025 1825 9025 1750
+Wire Wire Line
+	9025 1900 9025 1825
+Connection ~ 9025 1825
+Wire Wire Line
+	9025 2500 9025 2575
+Wire Wire Line
+	9025 2575 8225 2575
+Wire Wire Line
+	8225 2575 8225 2350
+Connection ~ 9025 2575
+Wire Wire Line
+	9025 2575 9025 2650
+Text Label 8650 2200 2    50   ~ 0
+LED
+Wire Wire Line
+	8725 2200 8650 2200
+Wire Wire Line
+	9025 1825 9825 1825
+Wire Wire Line
+	9825 1825 9825 2100
+Wire Wire Line
+	9825 2100 9900 2100
+Wire Wire Line
+	9025 2575 9825 2575
+Wire Wire Line
+	9825 2575 9825 2300
+Wire Wire Line
+	9825 2300 9900 2300
+Wire Wire Line
+	9325 2200 9900 2200
+Wire Wire Line
+	8800 4950 8900 4950
+Wire Wire Line
+	9175 5050 8975 5050
+Wire Wire Line
+	8975 5050 8975 5500
+Text Label 8400 4950 2    50   ~ 0
+SPEAKER
+Wire Wire Line
+	8400 4950 8500 4950
+Wire Wire Line
+	2600 2050 2600 2000
+Connection ~ 2600 2000
+Wire Wire Line
+	2600 2350 2600 2450
+Wire Wire Line
+	2600 2450 2375 2450
+Connection ~ 2375 2450
+Wire Wire Line
+	2375 2450 2375 2600
+$Comp
+L Device:C C2
+U 1 1 5D2A77B2
+P 5125 3550
+F 0 "C2" H 5011 3504 50  0000 R CNN
+F 1 "0.1uF" H 5011 3595 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0603_1608Metric" H 5163 3400 50  0001 C CNN
+F 3 "~" H 5125 3550 50  0001 C CNN
+	1    5125 3550
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	5125 3400 5125 3300
+Wire Wire Line
+	5125 3300 5850 3300
+Wire Wire Line
+	5850 3300 5850 3400
+Wire Wire Line
+	5850 3200 5850 3300
+Connection ~ 5850 3300
+$Comp
+L power:GND #PWR0110
+U 1 1 5D2A9F1B
+P 5125 3775
+F 0 "#PWR0110" H 5125 3525 50  0001 C CNN
+F 1 "GND" H 5130 3602 50  0000 C CNN
+F 2 "" H 5125 3775 50  0001 C CNN
+F 3 "" H 5125 3775 50  0001 C CNN
+	1    5125 3775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5125 3700 5125 3775
+Wire Wire Line
+	5850 4600 5850 4750
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J4
+U 1 1 5D2BD83C
+P 2175 6750
+F 0 "J4" H 2225 7067 50  0000 C CNN
+F 1 "ICSP" H 2225 6976 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2175 6750 50  0001 C CNN
+F 3 "~" H 2175 6750 50  0001 C CNN
+	1    2175 6750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0111
+U 1 1 5D2BE381
+P 2550 6925
+F 0 "#PWR0111" H 2550 6675 50  0001 C CNN
+F 1 "GND" H 2555 6752 50  0000 C CNN
+F 2 "" H 2550 6925 50  0001 C CNN
+F 3 "" H 2550 6925 50  0001 C CNN
+	1    2550 6925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 5D2BE3C1
+P 2550 6575
+F 0 "#PWR0112" H 2550 6425 50  0001 C CNN
+F 1 "+5V" H 2565 6748 50  0000 C CNN
+F 2 "" H 2550 6575 50  0001 C CNN
+F 3 "" H 2550 6575 50  0001 C CNN
+	1    2550 6575
+	1    0    0    -1  
+$EndComp
+Text Label 1825 6650 2    50   ~ 0
+MISO
+Text Label 2625 6750 0    50   ~ 0
+MOSI
+Text Label 1825 6750 2    50   ~ 0
+SCK
+Text Label 1825 6850 2    50   ~ 0
+RST
+Wire Wire Line
+	2475 6850 2550 6850
+Wire Wire Line
+	2550 6850 2550 6925
+Wire Wire Line
+	2475 6650 2550 6650
+Wire Wire Line
+	2550 6650 2550 6575
+Wire Wire Line
+	2475 6750 2625 6750
+Wire Wire Line
+	1825 6650 1975 6650
+Wire Wire Line
+	1975 6750 1825 6750
+Wire Wire Line
+	1825 6850 1975 6850
+Text Label 6600 4200 0    50   ~ 0
+RST
+Text Label 7000 3900 0    50   ~ 0
+SCK
+Text Label 7000 3800 0    50   ~ 0
+MISO
+Text Label 7000 3700 0    50   ~ 0
+MOSI
+Wire Wire Line
+	2600 1600 2600 1675
+Wire Wire Line
+	2275 1900 2375 1900
+Wire Wire Line
+	2375 1800 2275 1800
+Text Label 2375 1900 0    50   ~ 0
+SDA
+Text Label 2375 1800 0    50   ~ 0
+SCL
+$Comp
+L MCU_Microchip_ATtiny:ATtiny85-20SU U1
+U 1 1 5D28EFF8
+P 5850 4000
+F 0 "U1" H 5425 3425 50  0000 R CNN
+F 1 "ATtiny85-20SU" H 5650 3325 50  0000 R CNN
+F 2 "Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm" H 5850 4000 50  0001 C CIN
+F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf" H 5850 4000 50  0001 C CNN
+	1    5850 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 3700 7000 3700
+Wire Wire Line
+	6450 3800 7000 3800
+Wire Wire Line
+	6450 3900 7000 3900
+Wire Wire Line
+	6450 4000 6600 4000
+$Comp
+L Device:R R2
+U 1 1 5D2C7FBD
+P 5825 6725
+F 0 "R2" H 5895 6771 50  0000 L CNN
+F 1 "10K" V 5825 6650 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5755 6725 50  0001 C CNN
+F 3 "~" H 5825 6725 50  0001 C CNN
+	1    5825 6725
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 5D2C9742
+P 5825 6525
+F 0 "#PWR01" H 5825 6375 50  0001 C CNN
+F 1 "+5V" H 5840 6698 50  0000 C CNN
+F 2 "" H 5825 6525 50  0001 C CNN
+F 3 "" H 5825 6525 50  0001 C CNN
+	1    5825 6525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5825 6525 5825 6575
+Wire Wire Line
+	6450 4200 6600 4200
+Text Label 5825 7075 0    50   ~ 0
+RST
+Wire Wire Line
+	5825 6875 5825 7075
+$Comp
+L timhawes:Elechouse_PN532_V4 U2
+U 1 1 5D27A4E9
+P 2250 4350
+F 0 "U2" H 2300 4300 50  0000 R CNN
+F 1 "PN532" H 2375 4375 50  0000 R CNN
+F 2 "timhawes:ELECHOUSE_PN532_V4_USART_I2C" H 2250 4350 50  0001 C CNN
+F 3 "~" H 2250 4350 50  0001 C CNN
+	1    2250 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 3500 2250 3600
+Wire Wire Line
+	2250 4850 2250 4950
+Wire Wire Line
+	6450 4100 6600 4100
+$Comp
+L Device:Speaker LS2
+U 1 1 5D2E6C1C
+P 9375 5400
+F 0 "LS2" H 9545 5396 50  0000 L CNN
+F 1 "Speaker" H 9545 5305 50  0000 L CNN
+F 2 "Buzzer_Beeper:Buzzer_12x9.5RM7.6" H 9375 5200 50  0001 C CNN
+F 3 "~" H 9365 5350 50  0001 C CNN
+	1    9375 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8900 4950 8900 5400
+Wire Wire Line
+	8900 5400 9175 5400
+Connection ~ 8900 4950
+Wire Wire Line
+	8900 4950 9175 4950
+Wire Wire Line
+	8975 5500 9175 5500
+Connection ~ 8975 5500
+Wire Wire Line
+	8975 5500 8975 5700
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 5D2F4A3E
+P 2675 1675
+F 0 "#FLG0101" H 2675 1750 50  0001 C CNN
+F 1 "PWR_FLAG" V 2675 1803 50  0000 L CNN
+F 2 "" H 2675 1675 50  0001 C CNN
+F 3 "~" H 2675 1675 50  0001 C CNN
+	1    2675 1675
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 5D2F5506
+P 2250 2450
+F 0 "#FLG0102" H 2250 2525 50  0001 C CNN
+F 1 "PWR_FLAG" V 2250 2578 50  0000 L CNN
+F 2 "" H 2250 2450 50  0001 C CNN
+F 3 "~" H 2250 2450 50  0001 C CNN
+	1    2250 2450
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2675 1675 2600 1675
+Connection ~ 2600 1675
+Wire Wire Line
+	2600 1675 2600 2000
+Wire Wire Line
+	2250 2450 2375 2450
+$EndSCHEMATC
